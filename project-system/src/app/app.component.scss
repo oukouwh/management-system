@@ -1,0 +1,41 @@
+.login-form {
+    max-width: 415px;
+    // 表单居中显示
+    margin: auto;
+    margin-top: -500px;
+  }
+
+  .login-form-margin {
+    margin-bottom: 16px;
+    height: 40px;
+  }
+
+  .login-form-forgot {
+    float: right;
+  }
+
+  .login-form-button {
+    width: 100%;
+  }
+  
+  .user {
+      height: 40px;
+  }
+
+  .password {
+      height: 40px;
+  }
+
+  .login {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+  }
+
+  .h1-style {
+      text-align: center;
+      font-weight: 900;
+      color: #ffff;
+  }
