@@ -1,8 +1,8 @@
 /*
  * @Author: hao wang
  * @Date: 2020-07-04 12:52:40
- * @LastEditTime: 2020-07-05 09:26:27
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-07-05 22:37:20
+ * @LastEditors: hao wang
  * @Description: In User Settings Edit
  * @FilePath: \management-ystem\project-system\src\app\app.module.ts
  */ 
@@ -35,7 +35,7 @@ registerLocaleData(en);
     AppComponent,
     NavigationComponent,
     HeaderComponent,
-    FooterComponent,
+    FooterComponent, 
     ContentComponent,
     HomeComponent,
   ],

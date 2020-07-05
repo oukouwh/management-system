@@ -1,14 +1,20 @@
 /*
  * @Author: HAO WANG
  * @Date: 2020-07-04 12:52:40
- * @LastEditTime: 2020-07-04 16:07:47
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-07-05 22:29:46
+ * @LastEditors: hao wang
  * @Description: In User Settings Edit
  * @FilePath: \management-ystem\project-system\src\app\app.component.ts
  */
 
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+import {
+  FormBuilder,
+  FormGroup,
+  Validators,
+  ReactiveFormsModule,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +31,7 @@ export class AppComponent implements OnInit {
     }
   }
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
     this.validateForm = this.fb.group({
@@ -36,6 +42,7 @@ export class AppComponent implements OnInit {
   }
 
   loginClick() {
-      alert('success')
+    this.router.navigate(['./component/home/home.component.html'])
+    // alert('success');
   }
 }
