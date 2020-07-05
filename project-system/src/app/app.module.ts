@@ -1,7 +1,7 @@
 /*
  * @Author: hao wang
  * @Date: 2020-07-04 12:52:40
- * @LastEditTime: 2020-07-04 17:14:40
+ * @LastEditTime: 2020-07-05 09:26:27
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \management-ystem\project-system\src\app\app.module.ts
@@ -19,13 +19,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NZ_I18N, en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
+import { NavigationComponent } from './component/navigation/navigation.component';
+import { HeaderComponent } from './component/header/header.component';
+import { FooterComponent } from './component/footer/footer.component';
+import { ContentComponent } from './component/content/content.component';
+import { HomeComponent } from './component/home/home.component';
+// 引入自定义模块
+import { UserModule } from './module/user/user.module';
 
 registerLocaleData(en);
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavigationComponent,
+    HeaderComponent,
+    FooterComponent,
+    ContentComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +46,9 @@ registerLocaleData(en);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    // 引入自定义的UserModule
+    UserModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
