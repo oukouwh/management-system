@@ -1,0 +1,220 @@
+<!--
+ * @Description: 
+ * @Version: 0.0.1
+ * @Autor: hao wang
+ * @Date: 2020-07-07 20:15:20
+ * @LastEditors: hao wang
+ * @LastEditTime: 2020-07-09 22:07:16
+-->
+<nz-layout class="app-layout">
+  <nz-sider class="menu-sidebar" nzCollapsible nzWidth="256px" nzBreakpoint="md" [(nzCollapsed)]="isCollapsed"
+    [nzTrigger]="null">
+    <div class="sidebar-logo">
+      <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
+      <h1>后台管理项目</h1>
+    </div>
+    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+      <!-- <li nz-submenu nzOpen nzTitle="isCollapsed ? 'Navigation One' : ''" nzIcon="home">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">信息</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>编辑</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>查看</a>
+          </li>
+        </ul>
+      </li> -->
+
+      <!-- 首页栏 -->
+      <li nz-menu-item nz-tooltip nzTooltipPlacement="right" nzTitle="isCollapsed ? 'Navigation One' : ''" nzSelected>
+        <i nz-icon nzType="home"></i>
+        <span>首页</span>
+      </li>
+
+      <!-- 用户栏 -->
+      <li nz-submenu nzTitle="用户" nzIcon="user">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">用户1</a>
+          </li>
+        </ul>
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">用户2</a>
+          </li>
+        </ul>
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">用户3</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- 文件栏 -->
+      <li nz-submenu nzTitle="文件" nzIcon="file">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">文件一览</a>
+          </li>
+        </ul>
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">文件设置</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- 项目组 -->
+      <li nz-submenu nzTitle="项目组" nzIcon="team">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">项目一览</a>
+          </li>
+        </ul>
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">成员一览</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- 任务安排时间进度 -->
+      <li nz-submenu nzTitle="安排计划" nzIcon="calendar">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">待办事项</a>
+          </li>
+        </ul>
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">已完成</a>
+          </li>
+        </ul>
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">未完成</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- 表单 -->
+      <li nz-submenu nzTitle="表单" nzIcon="form">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">表单详细</a>
+          </li>
+        </ul>
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">表单设置</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- 编辑 -->
+      <li nz-submenu nzTitle="编辑" nzIcon="edit">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">编辑信息</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- 数据 -->
+      <li nz-menu-item>
+        <i nz-icon nzType="bar-chart"></i>
+        <span>数据信息</span>
+      </li>
+
+      <!-- 数据库 -->
+      <li nz-submenu nzTitle="数据库" nzIcon="database">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">数据库日志</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- 消息 -->
+      <li nz-submenu nzTitle="消息" nzIcon="message">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">消息列表</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- PDF -->
+      <li nz-menu-item>
+        <i nz-icon nzType="file-pdf"></i>
+        <span>PDF</span>
+      </li>
+
+      <!-- EXCEL -->
+      <li nz-menu-item>
+        <i nz-icon nzType="file-excel"></i>
+        <span>Excel</span>
+      </li>
+
+      <!-- 错误界面 -->
+      <li nz-menu-item>
+        <i nz-icon nzType="bug"></i>
+        <span>Error</span>
+      </li>
+
+      <!-- 关联 -->
+      <li nz-menu-item>
+        <i nz-icon nzType="link"></i>
+        <span>关联</span>
+      </li>
+
+      <!-- Email -->
+      <li nz-menu-item>
+        <i nz-icon nzType="mail"></i>
+        <span>邮件</span>
+      </li>
+
+      <!-- 国际化 -->
+      <li nz-menu-item>
+        <i nz-icon nzType="global"></i>
+        <span>国际化</span>
+      </li>
+
+
+
+      <!-- setting -->
+      <li nz-menu-item>
+        <i nz-icon nzType="setting"></i>
+        <span>设置</span>
+      </li>
+    </ul>
+  </nz-sider>
+
+  <nz-layout>
+    <nz-header>
+      
+      <div class="app-header">
+        <!-- <ul nz-menu nzTheme="dark" nzMode="horizontal" class="header-menu">
+          <li nz-menu-item nzSelected>nav 1</li>
+          <li nz-menu-item>nav 2</li>
+          <li nz-menu-item>nav 3</li>
+        </ul> -->
+        <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+          <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
+        </span>
+        
+      </div>
+
+      
+
+    </nz-header>
+    <nz-content>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
