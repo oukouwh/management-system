@@ -4,6 +4,31 @@
  * @Autor: hao wang
  * @Date: 2020-07-07 20:56:24
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-09 21:47:08
+ * @LastEditTime: 2020-07-10 18:21:47
 --> 
+<div class="login-container">
+    <div class="login-box">
+        <form nz-form [nzLayout]="'inline'" [formGroup]="validateForm" (ngSubmit)="submitForm()">
+            <nz-form-item>
+              <nz-form-control nzErrorTip="用户名不能为空">
+                <nz-input-group nzPrefixIcon="user">
+                  <input formControlName="userName" nz-input placeholder="Username" />
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-control nzErrorTip="密码不能为空">
+                <nz-input-group nzPrefixIcon="lock">
+                  <input formControlName="password" nz-input type="password" placeholder="Password" />
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-control>
+                <button nz-button nzType="primary" [disabled]="!validateForm.valid">登录</button>
+              </nz-form-control>
+            </nz-form-item>
+          </form>
+    </div>
+</div>
 

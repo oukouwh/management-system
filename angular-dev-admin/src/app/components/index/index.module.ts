@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-09 17:20:24
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-09 19:52:48
+ * @LastEditTime: 2020-07-10 18:48:01
  */ 
 import { NgModule } from '@angular/core';
 
@@ -18,4 +18,4 @@ import { IndexComponent } from './index.component';
   declarations: [IndexComponent],
   exports: [IndexComponent]
 })
-export class WelcomeModule { }
+export class IndexModule { }
