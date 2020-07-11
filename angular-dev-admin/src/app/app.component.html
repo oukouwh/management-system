@@ -4,9 +4,11 @@
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-09 22:07:16
+ * @LastEditTime: 2020-07-11 16:06:16
 -->
 <nz-layout class="app-layout">
+
+  <!-- 侧边导航栏 -->
   <nz-sider class="menu-sidebar" nzCollapsible nzWidth="256px" nzBreakpoint="md" [(nzCollapsed)]="isCollapsed"
     [nzTrigger]="null">
     <div class="sidebar-logo">
@@ -14,22 +16,9 @@
       <h1>后台管理项目</h1>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-      <!-- <li nz-submenu nzOpen nzTitle="isCollapsed ? 'Navigation One' : ''" nzIcon="home">
-        <ul>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/welcome">信息</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a>编辑</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a>查看</a>
-          </li>
-        </ul>
-      </li> -->
 
       <!-- 首页栏 -->
-      <li nz-menu-item nz-tooltip nzTooltipPlacement="right" nzTitle="isCollapsed ? 'Navigation One' : ''" nzSelected>
+      <li nz-menu-item nz-tooltip nzTooltipPlacement="right"  nzSelected>
         <i nz-icon nzType="home"></i>
         <span>首页</span>
       </li>
@@ -193,24 +182,32 @@
     </ul>
   </nz-sider>
 
+
   <nz-layout>
+    <!-- 顶部区域 -->
     <nz-header>
-      
       <div class="app-header">
-        <!-- <ul nz-menu nzTheme="dark" nzMode="horizontal" class="header-menu">
-          <li nz-menu-item nzSelected>nav 1</li>
-          <li nz-menu-item>nav 2</li>
-          <li nz-menu-item>nav 3</li>
-        </ul> -->
-        <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
-          <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
-        </span>
-        
-      </div>
-
-      
-
+        <ul nz-menu  nzMode="horizontal" >
+          <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+            <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
+          </span>
+          <li nz-menu-item nzSelected>首页</li>
+          <li nz-menu-item>用户</li>
+          <li nz-menu-item>文档</li>
+        </ul>
+      </div> 
     </nz-header>
+    
+    <!-- 面包屑区域 -->
+    <div class="breadcrumb">
+      <nz-breadcrumb>
+        <nz-breadcrumb-item>首页</nz-breadcrumb-item>
+        <nz-breadcrumb-item>用户</nz-breadcrumb-item>
+        <nz-breadcrumb-item>数据</nz-breadcrumb-item>
+      </nz-breadcrumb>
+    </div>
+
+    <!-- 内容区 -->
     <nz-content>
       <div class="inner-content">
         <router-outlet></router-outlet>
@@ -218,3 +215,4 @@
     </nz-content>
   </nz-layout>
 </nz-layout>
+

@@ -1,3 +1,11 @@
+/*
+ * @Description: 
+ * @Version: 0.0.1
+ * @Autor: hao wang
+ * @Date: 2020-07-07 20:15:20
+ * @LastEditors: hao wang
+ * @LastEditTime: 2020-07-10 19:59:17
+ */ 
 import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
 
@@ -8,7 +16,7 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display index message', () => {
     page.navigateTo();
     expect(page.getTitleText()).toEqual('angular-dev-admin app is running!');
   });

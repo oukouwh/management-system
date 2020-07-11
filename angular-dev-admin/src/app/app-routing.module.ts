@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-10 18:48:39
+ * @LastEditTime: 2020-07-11 15:26:18
  */
 
 import { NgModule } from '@angular/core';
@@ -17,16 +17,16 @@ const routes: Routes = [
     //     path: 'login',
     //     component: LoginComponent
     // },
-    {
-        path: 'index',
-        loadChildren: () =>
-        import('./components/index/index.module').then((m) => m.IndexModule),
-    },
-    { 
-        path: '', 
-        pathMatch: 'full', 
-        redirectTo: '/index' 
-    },
+    // {
+    //     path: 'index',
+    //     loadChildren: () =>
+    //     import('./components/index/index.module').then((m) => m.IndexModule),
+    // },
+    // { 
+    //     path: '', 
+    //     pathMatch: 'full', 
+    //     redirectTo: '/index' 
+    // },
 ];
 
 @NgModule({
