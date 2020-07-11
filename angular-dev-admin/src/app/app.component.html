@@ -4,21 +4,21 @@
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-11 16:06:16
+ * @LastEditTime: 2020-07-11 20:55:23
 -->
-<nz-layout class="app-layout">
 
+<nz-layout class="app-layout">
   <!-- 侧边导航栏 -->
   <nz-sider class="menu-sidebar" nzCollapsible nzWidth="256px" nzBreakpoint="md" [(nzCollapsed)]="isCollapsed"
     [nzTrigger]="null">
     <div class="sidebar-logo">
       <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
-      <h1>后台管理项目</h1>
+      <h1>项目管理系统</h1>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
 
       <!-- 首页栏 -->
-      <li nz-menu-item nz-tooltip nzTooltipPlacement="right"  nzSelected>
+      <li nz-menu-item nz-tooltip nzTooltipPlacement="right" nzSelected>
         <i nz-icon nzType="home"></i>
         <span>首页</span>
       </li>
@@ -182,22 +182,45 @@
     </ul>
   </nz-sider>
 
-
   <nz-layout>
     <!-- 顶部区域 -->
     <nz-header>
       <div class="app-header">
-        <ul nz-menu  nzMode="horizontal" >
+        <ul nz-menu nzMode="horizontal">
           <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
             <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
           </span>
           <li nz-menu-item nzSelected>首页</li>
           <li nz-menu-item>用户</li>
           <li nz-menu-item>文档</li>
+
+          <!-- 查询框 -->
+          <nz-input-group style="width: 70px;" [nzSuffix]="suffixIconSearch">
+            <input style="width: 30px;" type="text" nz-input placeholder="input search text" />
+          </nz-input-group>
+          <ng-template #suffixIconSearch>
+            <i nz-icon nzType="search"></i>
+          </ng-template>
+
+          <a nz-dropdown [nzDropdownMenu]="menu" class="img-right">
+            <img class="user" src="../assets/imgs//login.jpg">
+            <i nz-icon nzType="down"></i>
+          </a>
+          <nz-dropdown-menu #menu="nzDropdownMenu">
+            <ul nz-menu nzSelectable>
+              <li nz-menu-item><i nz-icon [nzType]="'user'"></i>个人中心</li>
+              <li nz-menu-item><i nz-icon [nzType]="'setting'"></i>设置</li>
+              <li nz-menu-item> <i nz-icon [nzType]="'poweroff'"></i>退出</li>
+            </ul>
+          </nz-dropdown-menu>
         </ul>
-      </div> 
+        <!-- <div class="r-content"> -->
+          
+        <!-- </div> -->
+
+      </div>
     </nz-header>
-    
+
     <!-- 面包屑区域 -->
     <div class="breadcrumb">
       <nz-breadcrumb>
@@ -215,4 +238,3 @@
     </nz-content>
   </nz-layout>
 </nz-layout>
-
