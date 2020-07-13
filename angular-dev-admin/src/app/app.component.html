@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-11 20:55:23
+ * @LastEditTime: 2020-07-13 17:12:39
 -->
 
 <nz-layout class="app-layout">
@@ -19,20 +19,22 @@
 
       <!-- 首页栏 -->
       <li nz-menu-item nz-tooltip nzTooltipPlacement="right" nzSelected>
+        <a routerLink="/login">
         <i nz-icon nzType="home"></i>
         <span>首页</span>
+      </a>
       </li>
 
       <!-- 用户栏 -->
       <li nz-submenu nzTitle="用户" nzIcon="user">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/welcome">用户1</a>
+            <a routerLink="/user">用户信息</a>
           </li>
         </ul>
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/welcome">用户2</a>
+            <a routerLink="/userList">用户列表详情</a>
           </li>
         </ul>
         <ul>
@@ -202,6 +204,7 @@
             <i nz-icon nzType="search"></i>
           </ng-template>
 
+          <!-- 用户头像 -->
           <a nz-dropdown [nzDropdownMenu]="menu" class="img-right">
             <img class="user" src="../assets/imgs//login.jpg">
             <i nz-icon nzType="down"></i>
@@ -233,8 +236,14 @@
     <!-- 内容区 -->
     <nz-content>
       <div class="inner-content">
+
+        <a routerLink="'/login'" routerLinkActive="active"></a>
+        <a routerLink="'/user'" routerLinkActive="active"></a>
+        <a routerLink="'/userList'" routerLinkActive="active"></a>
         <router-outlet></router-outlet>
       </div>
     </nz-content>
   </nz-layout>
 </nz-layout>
+
+

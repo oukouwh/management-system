@@ -1,10 +1,11 @@
+import { IndexComponent } from './components/index/index.component';
 /*
  * @Description: 
  * @Version: 0.0.1
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-10 18:21:04
+ * @LastEditTime: 2020-07-13 16:16:15
  */ 
 // Angular组件放置区域↓↓↓↓↓↓↓↓↓↓↓START↓↓↓↓↓↓↓↓↓↓↓↓↓↓添加angula组件区域
 import { NgModule } from '@angular/core';
@@ -20,6 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './components/login/login.component';
+import { UserComponent } from './components/user/userInfo/user.component';
+import { UserListComponent } from './components/user/userList/user-list.component'
 // 程序加载进入组件放置区域↑↑↑↑↑↑↑↑↑END↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
 // 引入NG-ZERRO-ANTD组件↓↓↓↓↓↓↓↓↓↓↓START↓↓↓↓↓↓↓↓↓↓↓↓↓↓添加nz组件区域
@@ -40,7 +43,10 @@ registerLocaleData(zh);
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    UserComponent,
+    UserListComponent,
+
   ],
   imports: [
     FormsModule,

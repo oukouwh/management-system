@@ -13,11 +13,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.scss']
 })
-export class IndexComponent implements OnInit {
+export class IndexComponent implements OnInit  {
+
 
   constructor() { }
 
   ngOnInit() {
   }
-
 }
+
