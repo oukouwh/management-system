@@ -4,14 +4,14 @@
  * @Autor: hao wang
  * @Date: 2020-07-14 11:16:00
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-14 11:44:57
+ * @LastEditTime: 2020-07-14 22:14:11
  */ 
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-userRate',
   templateUrl: './userRate.component.html',
-  styleUrls: ['./userRate.component.css'],
+  styleUrls: ['./userRate.component.scss'],
 })
 export class UserRateComponent implements OnInit {
     tooltips = ['非常差', '差','及格', '良好', '优秀'];

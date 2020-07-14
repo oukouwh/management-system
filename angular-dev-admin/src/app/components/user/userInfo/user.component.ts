@@ -4,14 +4,14 @@
  * @Autor: hao wang
  * @Date: 2020-07-11 15:20:19
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-14 18:23:23
+ * @LastEditTime: 2020-07-14 22:13:36
  */ 
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
 

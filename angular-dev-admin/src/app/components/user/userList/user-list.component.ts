@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-13 22:10:57
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-14 18:27:52
+ * @LastEditTime: 2020-07-14 22:13:57
  */
 
 import { Component, OnInit } from '@angular/core';
@@ -20,7 +20,7 @@ interface ItemData {
 @Component({
     selector: 'app-user-list',
     templateUrl: './user-list.component.html',
-    styleUrls: ['./user-list.component.css'],
+    styleUrls: ['./user-list.component.scss'],
 })
 export class UserListComponent implements OnInit {
     i = 0;
