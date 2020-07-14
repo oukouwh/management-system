@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-13 22:10:57
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-14 10:43:41
+ * @LastEditTime: 2020-07-14 18:27:52
  */
 
 import { Component, OnInit } from '@angular/core';
@@ -36,10 +36,10 @@ export class UserListComponent implements OnInit {
         ...this.listOfData,
         {
             id: `${this.i}`,
-            name: `Edward King ${this.i}`,
+            name: `UserInfo ${this.i}`,
             tel: '13577778888',
-            age: '32',
-            address: `London, Park Lane no. ${this.i}`,
+            age: '25',
+            address: `Tokyo, 足立入谷三丁目. ${this.i}`,
         },
         ];
         this.i++;
@@ -90,13 +90,13 @@ export class UserListComponent implements OnInit {
 
     ngOnInit(): void {
         this.addRow();
-        this.listOfData = new Array(6).fill(0).map((_, index) => {
+        this.listOfData = new Array(10).fill(0).map((_, index) => {
         return {
             id: index,
-            name: `Edward King ${index}`,
+            name: `UserInfo ${index}`,
             tel: '13577778888',
-            age: 32,
-            address: `London, Park Lane no. ${index}`,
+            age: 25,
+            address: `Tokyo, 足立区入谷三丁目. ${index}`,
         };
         });
     }

@@ -5,7 +5,7 @@ import { IndexComponent } from './components/index/index.component';
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-14 11:19:10
+ * @LastEditTime: 2020-07-14 20:52:56
  */ 
 // Angular组件放置区域↓↓↓↓↓↓↓↓↓↓↓START↓↓↓↓↓↓↓↓↓↓↓↓↓↓添加angula组件区域
 import { NgModule } from '@angular/core';
@@ -20,10 +20,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // 程序加载进入组件放置区域↓↓↓↓↓↓↓↓↓↓↓START↓↓↓↓↓↓↓↓↓↓↓↓↓↓添加程序加载区域
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { LoginComponent } from './components/login/login.component';
-import { UserComponent } from './components/user/userInfo/user.component';
-import { UserListComponent } from './components/user/userList/user-list.component';
-import { UserRateComponent } from './components/user/userRate/userRate.component';
+    // 登录模块组件
+    import { LoginComponent } from './components/login/login.component';
+    // 用户模块组件
+    import { UserComponent } from './components/user/userInfo/user.component';
+    import { UserListComponent } from './components/user/userList/user-list.component';
+    import { UserRateComponent } from './components/user/userRate/userRate.component';
 // 程序加载进入组件放置区域↑↑↑↑↑↑↑↑↑END↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
 // 引入NG-ZERRO-ANTD组件↓↓↓↓↓↓↓↓↓↓↓START↓↓↓↓↓↓↓↓↓↓↓↓↓↓添加nz组件区域
