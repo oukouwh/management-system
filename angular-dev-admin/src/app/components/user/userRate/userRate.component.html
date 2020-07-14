@@ -1,0 +1,29 @@
+<!--
+ * @Description: 
+ * @Version: 0.0.1
+ * @Autor: hao wang
+ * @Date: 2020-07-14 11:16:00
+ * @LastEditors: hao wang
+ * @LastEditTime: 2020-07-14 11:46:27
+-->
+<div>
+    <span>bug率：</span>
+    <nz-rate [(ngModel)]="bugValue" [nzTooltips]="tooltips"></nz-rate>
+    <span *ngIf="bugValue" class="ant-rate-text">{{ bugValue ? tooltips[bugValue - 1] : '' }}</span>
+</div>
+
+<div>
+    <span>工作效率：</span>
+    <nz-rate [(ngModel)]="workValue" [nzTooltips]="tooltips"></nz-rate>
+    <span *ngIf="workValue" class="ant-rate-text">{{ workValue ? tooltips[workValue - 1] : '' }}</span>
+</div>
+<div>
+    <span>解决问题能力：</span>
+    <nz-rate [(ngModel)]="questionValue" [nzTooltips]="tooltips"></nz-rate>
+    <span *ngIf="questionValue" class="ant-rate-text">{{ questionValue ? tooltips[questionValue - 1] : '' }}</span>
+</div>
+<div>
+    <span>团队合作能力：</span>
+    <nz-rate [(ngModel)]="teamValue" [nzTooltips]="tooltips"></nz-rate>
+    <span *ngIf="teamValue" class="ant-rate-text">{{ teamValue ? tooltips[teamValue - 1] : '' }}</span>
+</div>
