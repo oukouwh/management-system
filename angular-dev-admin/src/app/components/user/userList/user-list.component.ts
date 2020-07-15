@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-13 22:10:57
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-14 22:13:57
+ * @LastEditTime: 2020-07-15 20:10:40
  */
 
 import { Component, OnInit } from '@angular/core';
@@ -45,7 +45,6 @@ export class UserListComponent implements OnInit {
         this.i++;
     }
 
-    //
     updateCheckedSet(id: number, checked: boolean): void {
         if (checked) {
         this.setOfCheckedId.add(id);

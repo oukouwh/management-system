@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-14 20:53:45
+ * @LastEditTime: 2020-07-15 21:32:43
  */
 
 import { NgModule } from '@angular/core';
@@ -14,6 +14,8 @@ import { LoginComponent } from './components/login/login.component';
 import { UserComponent } from './components/user/userInfo/user.component';
 import { UserListComponent } from './components/user/userList/user-list.component';
 import { UserRateComponent } from './components/user/userRate/userRate.component';
+import { ErrorPageComponent } from './components/error/errorPage/errorPage.component';
+import { SuccessComponent } from './components/error/success/success.component';
 
 const routes: Routes = [
     {
@@ -41,7 +43,18 @@ const routes: Routes = [
         // 用户评价
         path: 'userRate',
         component: UserRateComponent,
+    }, 
+    {
+        // 404界面
+        path: 'errorPage',
+        component: ErrorPageComponent,
     },
+    {
+        // success界面
+        path: 'success',
+        component: SuccessComponent,
+    },
+    
 ];
 
 @NgModule({

@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-14 11:21:09
+ * @LastEditTime: 2020-07-15 21:31:43
 -->
 
 <nz-layout class="app-layout">
@@ -20,9 +20,9 @@
       <!-- 首页栏 -->
       <li nz-menu-item nz-tooltip nzTooltipPlacement="right" nzSelected>
         <a routerLink="/login">
-        <i nz-icon nzType="home"></i>
-        <span>首页</span>
-      </a>
+          <i nz-icon nzType="home"></i>
+          <span>首页</span>
+        </a>
       </li>
 
       <!-- 用户栏 -->
@@ -152,8 +152,17 @@
 
       <!-- 错误界面 -->
       <li nz-menu-item>
-        <i nz-icon nzType="bug"></i>
-        <span>Error</span>
+        <a routerLink="/errorPage">
+          <i nz-icon nzType="bug"></i>
+          <span>Error</span>
+        </a>
+      </li>
+
+      <li nz-menu-item>
+        <a routerLink="/success">
+          <i nz-icon [nzType]="'check-circle'" [nzTheme]="'twotone'" [nzTwotoneColor]="'#52c41a'"></i>
+          <span>success</span>
+        </a>
       </li>
 
       <!-- 关联 -->
@@ -206,7 +215,7 @@
 
           <!-- 用户头像 -->
           <a nz-dropdown [nzDropdownMenu]="menu" class="img-right">
-            <img class="user" src="../assets/imgs//login.jpg">
+            <img class="user" src="../assets/imgs/login.jpg">
             <i nz-icon nzType="down"></i>
           </a>
           <nz-dropdown-menu #menu="nzDropdownMenu">
@@ -218,7 +227,7 @@
           </nz-dropdown-menu>
         </ul>
         <!-- <div class="r-content"> -->
-          
+
         <!-- </div> -->
 
       </div>
@@ -236,15 +245,14 @@
     <!-- 内容区 -->
     <nz-content>
       <div class="inner-content">
-
         <a routerLink="'/login'" routerLinkActive="active"></a>
         <a routerLink="'/user'" routerLinkActive="active"></a>
         <a routerLink="'/userList'" routerLinkActive="active"></a>
         <a routerLink="'/userRate'" routerLinkActive="active"></a>
+        <a routerLink="'/errorPage'" routerLinkActive="active"></a>
+        <a routerLink="'/success'" routerLinkActive="active"></a>
         <router-outlet></router-outlet>
       </div>
     </nz-content>
   </nz-layout>
 </nz-layout>
-
-
