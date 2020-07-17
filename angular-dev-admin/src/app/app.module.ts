@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-15 21:33:19
+ * @LastEditTime: 2020-07-17 20:54:38
  */ 
 // Angular组件放置区域↓↓↓↓↓↓↓↓↓↓↓START↓↓↓↓↓↓↓↓↓↓↓↓↓↓添加angula组件区域
 import { NgModule } from '@angular/core';
@@ -29,6 +29,12 @@ import { AppRoutingModule } from './app-routing.module';
     import { ErrorPageComponent } from './components/error/errorPage/errorPage.component';
     // success模块组件
     import { SuccessComponent } from './components/error/success/success.component';
+    // 文件设置界面组件
+    import { FileSettingComponent } from './components/file/fileSetting/fileSetting.component';
+    // 文件一览组件
+    import { FileInfoComponent } from './components/file/fileInfo/fileInfo.component';
+    // 项目一览信息
+    import { ProjectInfoComponent } from './components/project/projectInfo/projectInfo.component';
 // 程序加载进入组件放置区域↑↑↑↑↑↑↑↑↑END↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
 // 引入NG-ZERRO-ANTD组件↓↓↓↓↓↓↓↓↓↓↓START↓↓↓↓↓↓↓↓↓↓↓↓↓↓添加nz组件区域
@@ -40,6 +46,7 @@ import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { IconsProviderModule } from './icons-provider.module';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzLayoutModule, NzButtonModule } from 'ng-zorro-antd';
+import { NzUploadModule } from 'ng-zorro-antd/upload';
 
 // 引入NG-ZERRO-ANTD组件↑↑↑↑↑↑↑↑↑END↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
@@ -53,8 +60,11 @@ registerLocaleData(zh);
     UserComponent,
     UserListComponent,
     UserRateComponent,
+    FileInfoComponent,
+    FileSettingComponent,
     ErrorPageComponent,
     SuccessComponent,
+    ProjectInfoComponent,
 
   ],
   imports: [
@@ -72,6 +82,7 @@ registerLocaleData(zh);
     NgZorroAntdModule,
     NzBreadCrumbModule,
     IconsProviderModule,
+    NzUploadModule,
 
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],

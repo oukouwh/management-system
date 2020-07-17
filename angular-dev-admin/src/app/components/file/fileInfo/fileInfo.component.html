@@ -1,3 +1,24 @@
-<p>
-  fileInfo works!
-</p>
+<!--
+ * @Description: 
+ * @Version: 0.0.1
+ * @Autor: hao wang
+ * @Date: 2020-07-14 14:16:41
+ * @LastEditors: hao wang
+ * @LastEditTime: 2020-07-17 20:41:12
+--> 
+<a nz-dropdown [nzDropdownMenu]="menu" (nzVisibleChange)="change($event)">
+  一览信息
+  <i nz-icon nzType="down"></i>
+</a>
+<nz-dropdown-menu #menu="nzDropdownMenu">
+  <ul nz-menu>
+    <li nz-menu-item>Tool</li>
+    <li nz-menu-item>fileName</li>
+    <li nz-submenu nzTitle="学习资料">
+      <ul>
+        <li nz-menu-item>山上悠亚</li>
+        <li nz-menu-item>明日花</li>
+      </ul>
+    </li>
+  </ul>
+</nz-dropdown-menu>

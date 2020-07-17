@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-15 21:31:43
+ * @LastEditTime: 2020-07-17 20:55:13
 -->
 
 <nz-layout class="app-layout">
@@ -48,12 +48,12 @@
       <li nz-submenu nzTitle="文件" nzIcon="file">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/welcome">文件一览</a>
+            <a routerLink="/fileInfo">文件一览</a>
           </li>
         </ul>
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/welcome">文件设置</a>
+            <a routerLink="/fileSetting">文件设置</a>
           </li>
         </ul>
       </li>
@@ -62,7 +62,7 @@
       <li nz-submenu nzTitle="项目组" nzIcon="team">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/welcome">项目一览</a>
+            <a routerLink="/projectInfo">项目一览</a>
           </li>
         </ul>
         <ul>
@@ -251,8 +251,12 @@
         <a routerLink="'/userRate'" routerLinkActive="active"></a>
         <a routerLink="'/errorPage'" routerLinkActive="active"></a>
         <a routerLink="'/success'" routerLinkActive="active"></a>
+        <a routerLink="'/fileInfo'" routerLinkActive="active"></a>
+        <a routerLink="'/fileSetting'" routerLinkActive="active"></a>
+        <a routerLink="'/projectInfo'" routerLinkActive="active"></a>
         <router-outlet></router-outlet>
       </div>
     </nz-content>
+    <nz-footer>©2020 HAO WANG 此界面解释权归オウ－コウ所有</nz-footer>
   </nz-layout>
 </nz-layout>

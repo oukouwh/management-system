@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-15 21:32:43
+ * @LastEditTime: 2020-07-17 20:54:08
  */
 
 import { NgModule } from '@angular/core';
@@ -16,6 +16,9 @@ import { UserListComponent } from './components/user/userList/user-list.componen
 import { UserRateComponent } from './components/user/userRate/userRate.component';
 import { ErrorPageComponent } from './components/error/errorPage/errorPage.component';
 import { SuccessComponent } from './components/error/success/success.component';
+import { FileSettingComponent } from './components/file/fileSetting/fileSetting.component';
+import { FileInfoComponent } from './components/file/fileInfo/fileInfo.component';
+import { ProjectInfoComponent } from './components/project/projectInfo/projectInfo.component';
 
 const routes: Routes = [
     {
@@ -45,6 +48,21 @@ const routes: Routes = [
         component: UserRateComponent,
     }, 
     {
+        // 文件信息一览界面
+        path: 'fileInfo',
+        component: FileInfoComponent,
+    },
+    {
+        // 文件设置界面
+        path: 'fileSetting',
+        component: FileSettingComponent,
+    },
+    {
+        // 项目一览界面
+        path: 'projectInfo',
+        component: ProjectInfoComponent,
+    },
+    {
         // 404界面
         path: 'errorPage',
         component: ErrorPageComponent,
@@ -54,6 +72,7 @@ const routes: Routes = [
         path: 'success',
         component: SuccessComponent,
     },
+    
     
 ];
 
