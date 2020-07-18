@@ -4,13 +4,13 @@
  * @Autor: hao wang
  * @Date: 2020-07-17 20:47:43
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-18 22:10:16
+ * @LastEditTime: 2020-07-18 23:55:34
 -->
 
-<div nz-row [nzGutter]="8">
+<div nz-row>
   <div nz-col [nzSpan]="8">
     <nz-card nzTitle="用户信息列表">
-      <img class="user" src="../../../../assets/imgs/login.jpg">
+      <img class="user" src="../../../../assets/imgs/admin.jpg">
       <div class="super-admin">超级管理员</div>
       <!-- nzFrontPagination数据不进行分页，设置为false，true显示分页 -->
       <nz-table [nzData]="listOfData" [nzFrontPagination]="false">
@@ -47,9 +47,57 @@
       </div>
     </nz-card>
   </div>
-  <div class="r-card" nz-col [nzSpan]="8">
-    <nz-card nzTitle="Card title">
-      <p>Card content</p>
-    </nz-card>
+
+  <div class="r-card">
+    <div nz-col>
+      <nz-card>
+        <nz-tabset>
+          <nz-tab nzTitle="描述">
+            <nz-list [nzDataSource]="data" [nzRenderItem]="item" [nzItemLayout]="'horizontal'">
+              <ng-template #item let-item>
+                <nz-comment [nzAuthor]="item.author" [nzDatetime]="item.datetime">
+                  <nz-avatar nz-comment-avatar nzIcon="user" [nzSrc]="item.avatar"></nz-avatar>
+                  <nz-comment-content>
+                    <p>{{ item.content }}</p>
+                  </nz-comment-content>
+                  <div class="link-top"></div>
+                  <nz-comment-action>赞</nz-comment-action>
+                </nz-comment>
+              </ng-template>
+            </nz-list>
+          </nz-tab>
+          <nz-tab nzTitle="历史">
+            <nz-timeline>
+              <nz-timeline-item nzColor="green">Create a services site 2015-09-01</nz-timeline-item>
+              <nz-timeline-item nzColor="green">Solve initial network problems 2015-09-01</nz-timeline-item>
+              <nz-timeline-item nzColor="red">
+                <p>Solve initial network problems 1</p>
+                <p>Solve initial network problems 2</p>
+                <p>Solve initial network problems 3 2020-09-01</p>
+              </nz-timeline-item>
+              <nz-timeline-item>
+                <p>Technical testing 1</p>
+                <p>Technical testing 2</p>
+                <p>Technical testing 3 2020-09-01</p>
+              </nz-timeline-item>
+              <nz-timeline-item nzColor="gray">
+                <p>Technical testing 1</p>
+                <p>Technical testing 2</p>
+                <p>Technical testing 3 2020-09-01</p>
+              </nz-timeline-item>
+              <nz-timeline-item nzColor="gray">
+                <p>Technical testing 1</p>
+                <p>Technical testing 2</p>
+                <p>Technical testing 3 2020-09-01</p>
+              </nz-timeline-item>
+            </nz-timeline>
+          </nz-tab>
+          <nz-tab nzTitle="信息">
+            Content of Tab Pane 3
+          </nz-tab>
+        </nz-tabset>
+      </nz-card>
+    </div>
   </div>
+
 </div>

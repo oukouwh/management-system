@@ -4,9 +4,10 @@
  * @Autor: hao wang
  * @Date: 2020-07-17 20:47:43
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-18 20:57:58
+ * @LastEditTime: 2020-07-18 23:53:00
  */ 
 import { Component, OnInit } from '@angular/core';
+import { addDays, formatDistance } from 'date-fns';
 
 interface Person {
   key: string;
@@ -44,16 +45,30 @@ export class ProjectTeamComponent implements OnInit {
     }
   ];
 
-  tabs = [
+  data = [
     {
-      active: true,
-      name: 'Tab 1',
-      icon: 'apple'
+      author: 'Jack',
+      avatar: '../../../../assets/imgs/userMM0.jpg',
+      content:
+        'We supply a series of design principles, practical patterns and high quality design resources' +
+        '(Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
+      datetime: formatDistance(new Date(), addDays(new Date(), 1))
     },
     {
-      active: false,
-      name: 'Tab 2',
-      icon: 'android'
+      author: 'Elliot',
+      avatar: '../../../../assets/imgs/userMM.jpg',
+      content:
+        'We supply a series of design principles, practical patterns and high quality design resources' +
+        '(Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
+      datetime: formatDistance(new Date(), addDays(new Date(), 2))
+    },
+    {
+      author: 'HAO WANG',
+      avatar: '../../../../assets/imgs/user0.jpg',
+      content:
+        'We supply a series of design principles, practical patterns and high quality design resources' +
+        '(Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
+      datetime: formatDistance(new Date(), addDays(new Date(), 3))
     }
   ];
   
