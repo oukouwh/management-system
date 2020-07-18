@@ -1,3 +1,55 @@
-<p>
-  projectTeam works!
-</p>
+<!--
+ * @Description: 
+ * @Version: 0.0.1
+ * @Autor: hao wang
+ * @Date: 2020-07-17 20:47:43
+ * @LastEditors: hao wang
+ * @LastEditTime: 2020-07-18 22:10:16
+-->
+
+<div nz-row [nzGutter]="8">
+  <div nz-col [nzSpan]="8">
+    <nz-card nzTitle="用户信息列表">
+      <img class="user" src="../../../../assets/imgs/login.jpg">
+      <div class="super-admin">超级管理员</div>
+      <!-- nzFrontPagination数据不进行分页，设置为false，true显示分页 -->
+      <nz-table [nzData]="listOfData" [nzFrontPagination]="false">
+        <thead>
+          <tr>
+            <th>姓名</th>
+            <th>职位</th>
+            <th>状态</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of listOfData">
+            <td>{{ data.name }}</td>
+            <td>{{ data.job }}</td>
+            <td>{{ data.status }}</td>
+          </tr>
+        </tbody>
+      </nz-table>
+      <div>
+        <span>技术一览</span>
+        <div class="link-top"></div>
+        <div><span>Vue</span>
+          <nz-progress [nzPercent]="30"></nz-progress>
+        </div>
+        <div><span>Angular</span>
+          <nz-progress [nzPercent]="50"></nz-progress>
+        </div>
+        <div><span>React</span>
+          <nz-progress [nzPercent]="100"></nz-progress>
+        </div>
+        <div><span>Java</span>
+          <nz-progress [nzPercent]="50"></nz-progress>
+        </div>
+      </div>
+    </nz-card>
+  </div>
+  <div class="r-card" nz-col [nzSpan]="8">
+    <nz-card nzTitle="Card title">
+      <p>Card content</p>
+    </nz-card>
+  </div>
+</div>

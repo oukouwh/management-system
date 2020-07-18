@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-17 20:54:08
+ * @LastEditTime: 2020-07-18 16:07:58
  */
 
 import { NgModule } from '@angular/core';
@@ -14,11 +14,12 @@ import { LoginComponent } from './components/login/login.component';
 import { UserComponent } from './components/user/userInfo/user.component';
 import { UserListComponent } from './components/user/userList/user-list.component';
 import { UserRateComponent } from './components/user/userRate/userRate.component';
-import { ErrorPageComponent } from './components/error/errorPage/errorPage.component';
-import { SuccessComponent } from './components/error/success/success.component';
 import { FileSettingComponent } from './components/file/fileSetting/fileSetting.component';
 import { FileInfoComponent } from './components/file/fileInfo/fileInfo.component';
 import { ProjectInfoComponent } from './components/project/projectInfo/projectInfo.component';
+import { ProjectTeamComponent } from './components/project/projectTeam/projectTeam.component';
+import { ErrorPageComponent } from './components/error/errorPage/errorPage.component';
+import { SuccessComponent } from './components/error/success/success.component';
 
 const routes: Routes = [
     {
@@ -61,6 +62,11 @@ const routes: Routes = [
         // 项目一览界面
         path: 'projectInfo',
         component: ProjectInfoComponent,
+    },
+    {
+        // 成员一览界面
+        path: 'projectTeam',
+        component: ProjectTeamComponent,
     },
     {
         // 404界面

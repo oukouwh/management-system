@@ -35,6 +35,9 @@ import { AppRoutingModule } from './app-routing.module';
     import { FileInfoComponent } from './components/file/fileInfo/fileInfo.component';
     // 项目一览信息
     import { ProjectInfoComponent } from './components/project/projectInfo/projectInfo.component';
+    // 成员一览
+    import { ProjectTeamComponent } from './components/project/projectTeam/projectTeam.component';
+
 // 程序加载进入组件放置区域↑↑↑↑↑↑↑↑↑END↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
 // 引入NG-ZERRO-ANTD组件↓↓↓↓↓↓↓↓↓↓↓START↓↓↓↓↓↓↓↓↓↓↓↓↓↓添加nz组件区域
@@ -62,9 +65,10 @@ registerLocaleData(zh);
     UserRateComponent,
     FileInfoComponent,
     FileSettingComponent,
+    ProjectInfoComponent,
+    ProjectTeamComponent,
     ErrorPageComponent,
     SuccessComponent,
-    ProjectInfoComponent,
 
   ],
   imports: [
