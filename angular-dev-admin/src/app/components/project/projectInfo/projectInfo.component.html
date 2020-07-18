@@ -1,5 +1,5 @@
 <!--
- * @Description: 
+ * @Description:
  * @Version: 0.0.1
  * @Autor: hao wang
  * @Date: 2020-07-17 20:46:46
@@ -7,22 +7,44 @@
  * @LastEditTime: 2020-07-17 21:59:18
 -->
 <div class="project-style">
-  <div style="display: block;">
-      <label>123</label>
-    <nz-progress [nzPercent]="30"></nz-progress>
+  <div nz-row class="ant-row line-height30">
+    <div nz-col class="ant-col ant-col-8 ant-col-xl-4">
+      <label>default</label>
+    </div>
+    <div class="ant-col ant-col-16 ant-col-xl-8">
+      <nz-progress [nzPercent]="30"></nz-progress>
+    </div>
   </div>
-
-
-  <div>
-    <nz-progress [nzPercent]="50" nzStatus="active"></nz-progress>
+  <div nz-row class="ant-row line-height30">
+    <div nz-col class="ant-col ant-col-8 ant-col-xl-4">
+      <label>active</label>
+    </div>
+    <div class="ant-col ant-col-16 ant-col-xl-8">
+      <nz-progress [nzPercent]="50" nzStatus="active"></nz-progress>
+    </div>
   </div>
-  <div>
-    <nz-progress [nzPercent]="70" nzStatus="exception"></nz-progress>
+  <div nz-row class="ant-row line-height30">
+      <div nz-col class="ant-col ant-col-8 ant-col-xl-4">
+        <label>exception</label>
+      </div>
+      <div class="ant-col ant-col-16 ant-col-xl-8">
+        <nz-progress [nzPercent]="70" nzStatus="exception"></nz-progress>
+      </div>
   </div>
-  <div>
-    <nz-progress [nzPercent]="100" nzStatus="normal"></nz-progress>
+  <div nz-row class="ant-row line-height30">
+    <div nz-col class="ant-col ant-col-8 ant-col-xl-4">
+      <label>normal</label>
+    </div>
+    <div class="ant-col ant-col-16 ant-col-xl-8">
+      <nz-progress [nzPercent]="100" nzStatus="normal"></nz-progress>
+    </div>
   </div>
-  <div>
-    <nz-progress [nzPercent]="50" [nzShowInfo]="false"></nz-progress>
+  <div nz-row class="ant-row line-height30">
+    <div nz-col class="ant-col ant-col-8 ant-col-xl-4">
+      <label>nzShowInfo</label>
+    </div>
+    <div class="ant-col ant-col-16 ant-col-xl-8">
+      <nz-progress [nzPercent]="50" [nzShowInfo]="false"></nz-progress>
+    </div>
   </div>
 </div>
