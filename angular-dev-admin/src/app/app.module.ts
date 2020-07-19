@@ -45,6 +45,8 @@ import { AppRoutingModule } from './app-routing.module';
     import { PlanTimeComponent } from './components/plan/planTime/planTime.component';
     // 计划总结界面
     import { PlanSummaryComponent } from './components/plan/planSummary/planSummary.component';
+    // 表单详情界面
+    import { FormInfoComponent } from './components/form/formInfo/formInfo.component';
 // 程序加载进入组件放置区域↑↑↑↑↑↑↑↑↑END↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
 // 引入NG-ZERRO-ANTD组件↓↓↓↓↓↓↓↓↓↓↓START↓↓↓↓↓↓↓↓↓↓↓↓↓↓添加nz组件区域
@@ -82,6 +84,7 @@ registerLocaleData(zh);
     PlanInfoComponent,
     PlanTimeComponent,
     PlanSummaryComponent,
+    FormInfoComponent,
     ErrorPageComponent,
     SuccessComponent,
 

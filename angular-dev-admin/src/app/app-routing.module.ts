@@ -24,6 +24,7 @@ import { SuccessComponent } from './components/error/success/success.component';
 import { PlanInfoComponent } from './components/plan/planInfo/planInfo.component';
 import { PlanTimeComponent } from './components/plan/planTime/planTime.component';
 import { PlanSummaryComponent } from './components/plan/planSummary/planSummary.component';
+import { FormInfoComponent } from './components/form/formInfo/formInfo.component';
 
 const routes: Routes = [
     {
@@ -93,6 +94,12 @@ const routes: Routes = [
         // 计划总结界面
         path: 'planSummary',
         component: PlanSummaryComponent,
+        
+    },
+    {
+        // 表单详细界面
+        path: 'formInfo',
+        component: FormInfoComponent,
         
     },
     {
