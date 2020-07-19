@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-19 10:43:30
+ * @LastEditTime: 2020-07-19 16:52:50
  */ 
 // Angular组件放置区域↓↓↓↓↓↓↓↓↓↓↓START↓↓↓↓↓↓↓↓↓↓↓↓↓↓添加angula组件区域
 import { NgModule } from '@angular/core';
@@ -39,6 +39,10 @@ import { AppRoutingModule } from './app-routing.module';
     import { ProjectTeamComponent } from './components/project/projectTeam/projectTeam.component';
     // 计划一览
     import { PlanInfoComponent } from './components/plan/planInfo/planInfo.component';
+    // 计划时间
+    import { PlanTimeComponent } from './components/plan/planTime/planTime.component';
+    // 计划总结界面
+    import { PlanSummaryComponent } from './components/plan/planSummary/planSummary.component';
 // 程序加载进入组件放置区域↑↑↑↑↑↑↑↑↑END↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
 // 引入NG-ZERRO-ANTD组件↓↓↓↓↓↓↓↓↓↓↓START↓↓↓↓↓↓↓↓↓↓↓↓↓↓添加nz组件区域
@@ -53,6 +57,10 @@ import { NzLayoutModule, NzButtonModule } from 'ng-zorro-antd';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
 
 // 引入NG-ZERRO-ANTD组件↑↑↑↑↑↑↑↑↑END↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+
+// 数据可视化第三方Echarts
+import { NgxEchartsModule } from 'ngx-echarts';
+import * as echarts from 'echarts';
 
 
 registerLocaleData(zh);
@@ -69,6 +77,8 @@ registerLocaleData(zh);
     ProjectInfoComponent,
     ProjectTeamComponent,
     PlanInfoComponent,
+    PlanTimeComponent,
+    PlanSummaryComponent,
     ErrorPageComponent,
     SuccessComponent,
 
@@ -89,7 +99,10 @@ registerLocaleData(zh);
     NzBreadCrumbModule,
     IconsProviderModule,
     NzUploadModule,
-
+    // 数据可视化模块
+    NgxEchartsModule.forRoot({
+      echarts,
+    }),
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]

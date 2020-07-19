@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-19 10:42:57
+ * @LastEditTime: 2020-07-19 16:42:05
  */
 
 import { NgModule } from '@angular/core';
@@ -21,6 +21,8 @@ import { ProjectTeamComponent } from './components/project/projectTeam/projectTe
 import { ErrorPageComponent } from './components/error/errorPage/errorPage.component';
 import { SuccessComponent } from './components/error/success/success.component';
 import { PlanInfoComponent } from './components/plan/planInfo/planInfo.component';
+import { PlanTimeComponent } from './components/plan/planTime/planTime.component';
+import { PlanSummaryComponent } from './components/plan/planSummary/planSummary.component';
 
 const routes: Routes = [
     {
@@ -73,6 +75,18 @@ const routes: Routes = [
         // 计划一览界面
         path: 'planInfo',
         component: PlanInfoComponent,
+        
+    },
+    {
+        // 时间计划界面
+        path: 'planTime',
+        component: PlanTimeComponent,
+        
+    },
+    {
+        // 计划总结界面
+        path: 'planSummary',
+        component: PlanSummaryComponent,
         
     },
     {
