@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-17 20:54:38
+ * @LastEditTime: 2020-07-19 10:43:30
  */ 
 // Angular组件放置区域↓↓↓↓↓↓↓↓↓↓↓START↓↓↓↓↓↓↓↓↓↓↓↓↓↓添加angula组件区域
 import { NgModule } from '@angular/core';
@@ -37,7 +37,8 @@ import { AppRoutingModule } from './app-routing.module';
     import { ProjectInfoComponent } from './components/project/projectInfo/projectInfo.component';
     // 成员一览
     import { ProjectTeamComponent } from './components/project/projectTeam/projectTeam.component';
-
+    // 计划一览
+    import { PlanInfoComponent } from './components/plan/planInfo/planInfo.component';
 // 程序加载进入组件放置区域↑↑↑↑↑↑↑↑↑END↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
 // 引入NG-ZERRO-ANTD组件↓↓↓↓↓↓↓↓↓↓↓START↓↓↓↓↓↓↓↓↓↓↓↓↓↓添加nz组件区域
@@ -67,6 +68,7 @@ registerLocaleData(zh);
     FileSettingComponent,
     ProjectInfoComponent,
     ProjectTeamComponent,
+    PlanInfoComponent,
     ErrorPageComponent,
     SuccessComponent,
 

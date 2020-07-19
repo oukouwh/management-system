@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-18 16:07:58
+ * @LastEditTime: 2020-07-19 10:42:57
  */
 
 import { NgModule } from '@angular/core';
@@ -20,6 +20,7 @@ import { ProjectInfoComponent } from './components/project/projectInfo/projectIn
 import { ProjectTeamComponent } from './components/project/projectTeam/projectTeam.component';
 import { ErrorPageComponent } from './components/error/errorPage/errorPage.component';
 import { SuccessComponent } from './components/error/success/success.component';
+import { PlanInfoComponent } from './components/plan/planInfo/planInfo.component';
 
 const routes: Routes = [
     {
@@ -67,6 +68,12 @@ const routes: Routes = [
         // 成员一览界面
         path: 'projectTeam',
         component: ProjectTeamComponent,
+    },
+    {
+        // 计划一览界面
+        path: 'planInfo',
+        component: PlanInfoComponent,
+        
     },
     {
         // 404界面

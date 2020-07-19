@@ -4,13 +4,13 @@
  * @Autor: hao wang
  * @Date: 2020-07-17 20:47:43
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-18 23:55:34
+ * @LastEditTime: 2020-07-19 10:35:04
 -->
 
 <div nz-row>
   <div nz-col [nzSpan]="8">
     <nz-card nzTitle="用户信息列表">
-      <img class="user" src="../../../../assets/imgs/admin.jpg">
+      <img class="user" src="../../../../assets/imgs/admin.jpg" />
       <div class="super-admin">超级管理员</div>
       <!-- nzFrontPagination数据不进行分页，设置为false，true显示分页 -->
       <nz-table [nzData]="listOfData" [nzFrontPagination]="false">
@@ -32,16 +32,20 @@
       <div>
         <span>技术一览</span>
         <div class="link-top"></div>
-        <div><span>Vue</span>
+        <div>
+          <span>Vue</span>
           <nz-progress [nzPercent]="30"></nz-progress>
         </div>
-        <div><span>Angular</span>
+        <div>
+          <span>Angular</span>
           <nz-progress [nzPercent]="50"></nz-progress>
         </div>
-        <div><span>React</span>
+        <div>
+          <span>React</span>
           <nz-progress [nzPercent]="100"></nz-progress>
         </div>
-        <div><span>Java</span>
+        <div>
+          <span>Java</span>
           <nz-progress [nzPercent]="50"></nz-progress>
         </div>
       </div>
@@ -53,10 +57,21 @@
       <nz-card>
         <nz-tabset>
           <nz-tab nzTitle="描述">
-            <nz-list [nzDataSource]="data" [nzRenderItem]="item" [nzItemLayout]="'horizontal'">
+            <nz-list
+              [nzDataSource]="data"
+              [nzRenderItem]="item"
+              [nzItemLayout]="'horizontal'"
+            >
               <ng-template #item let-item>
-                <nz-comment [nzAuthor]="item.author" [nzDatetime]="item.datetime">
-                  <nz-avatar nz-comment-avatar nzIcon="user" [nzSrc]="item.avatar"></nz-avatar>
+                <nz-comment
+                  [nzAuthor]="item.author"
+                  [nzDatetime]="item.datetime"
+                >
+                  <nz-avatar
+                    nz-comment-avatar
+                    nzIcon="user"
+                    [nzSrc]="item.avatar"
+                  ></nz-avatar>
                   <nz-comment-content>
                     <p>{{ item.content }}</p>
                   </nz-comment-content>
@@ -68,36 +83,81 @@
           </nz-tab>
           <nz-tab nzTitle="历史">
             <nz-timeline>
-              <nz-timeline-item nzColor="green">Create a services site 2015-09-01</nz-timeline-item>
-              <nz-timeline-item nzColor="green">Solve initial network problems 2015-09-01</nz-timeline-item>
+              <nz-timeline-item nzColor="green"
+                >2020-07-19 END</nz-timeline-item
+              >
+              <nz-timeline-item nzColor="green"
+                >Email:oukouwh@163.com</nz-timeline-item
+              >
               <nz-timeline-item nzColor="red">
-                <p>Solve initial network problems 1</p>
-                <p>Solve initial network problems 2</p>
-                <p>Solve initial network problems 3 2020-09-01</p>
+                <p>解决问题</p>
+                <p>调整样式</p>
+                <p>对应bug</p>
               </nz-timeline-item>
               <nz-timeline-item>
-                <p>Technical testing 1</p>
-                <p>Technical testing 2</p>
-                <p>Technical testing 3 2020-09-01</p>
+                <p>确定方案</p>
+                <p>详细设计编写</p>
+                <p>和产品沟通对应</p>
               </nz-timeline-item>
               <nz-timeline-item nzColor="gray">
-                <p>Technical testing 1</p>
-                <p>Technical testing 2</p>
-                <p>Technical testing 3 2020-09-01</p>
+                <p>WANG-HAO 2020-07 git push</p>
+                <p>WANG-HAO 2020-07 Version</p>
+                <p>WANG-HAO 2020-07 TEST</p>
               </nz-timeline-item>
               <nz-timeline-item nzColor="gray">
-                <p>Technical testing 1</p>
-                <p>Technical testing 2</p>
-                <p>Technical testing 3 2020-09-01</p>
+                <p>2020-07-10 creat project</p>
+                <p>2020-07-11 push github</p>
               </nz-timeline-item>
             </nz-timeline>
           </nz-tab>
           <nz-tab nzTitle="信息">
-            Content of Tab Pane 3
+            <nz-alert
+              nzType="success"
+              nzMessage="Success Tips"
+              nzShowIcon
+            ></nz-alert>
+            <nz-alert
+              nzType="info"
+              nzMessage="Informational Notes"
+              nzShowIcon
+            ></nz-alert>
+            <nz-alert
+              nzType="warning"
+              nzMessage="Warning"
+              nzShowIcon
+            ></nz-alert>
+            <nz-alert nzType="error" nzMessage="Error" nzShowIcon></nz-alert>
+            <nz-alert
+              nzType="success"
+              nzMessage="Success Tips"
+              nzDescription="Detailed description and advices about successful copywriting."
+              nzShowIcon
+            >
+            </nz-alert>
+            <nz-alert
+              nzType="info"
+              nzMessage="Informational Notes"
+              nzDescription="Additional description and informations about copywriting."
+              nzShowIcon
+            >
+            </nz-alert>
+            <nz-alert
+              nzType="warning"
+              nzMessage="Warning"
+              nzDescription="This is a warning notice about copywriting."
+              nzShowIcon
+            >
+            </nz-alert>
+            <nz-alert
+              nzType="error"
+              nzMessage="Error"
+              nzDescription="This is an error message about copywriting."
+              nzShowIcon
+            >
+            </nz-alert>
           </nz-tab>
         </nz-tabset>
       </nz-card>
     </div>
   </div>
-
 </div>
