@@ -10,6 +10,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { IndexComponent } from './components/index/index.component';
 import { LoginComponent } from './components/login/login.component';
 import { UserComponent } from './components/user/userInfo/user.component';
 import { UserListComponent } from './components/user/userList/user-list.component';
@@ -31,10 +32,15 @@ const routes: Routes = [
         component: LoginComponent,
     },
     {
+        // 首页
+        path: 'index',
+        component: IndexComponent,
+    },   
+    {
         // 初始化加载跳转到登录界面
         path: '',
         pathMatch: 'full',
-        redirectTo: '/login',
+        redirectTo: '/index',
     },
     {
         // 用户信息界面

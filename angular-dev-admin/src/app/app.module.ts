@@ -19,6 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // 程序加载进入组件放置区域↓↓↓↓↓↓↓↓↓↓↓START↓↓↓↓↓↓↓↓↓↓↓↓↓↓添加程序加载区域
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+    // index首页
+    import { IndexComponent } from './components/index/index.component';
     // 登录模块组件
     import { LoginComponent } from './components/login/login.component';
     // 用户模块组件
@@ -68,6 +70,7 @@ registerLocaleData(zh);
 @NgModule({
   declarations: [
     AppComponent,
+    IndexComponent,
     LoginComponent,
     UserComponent,
     UserListComponent,
