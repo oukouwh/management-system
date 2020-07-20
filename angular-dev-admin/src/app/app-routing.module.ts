@@ -26,6 +26,8 @@ import { PlanTimeComponent } from './components/plan/planTime/planTime.component
 import { PlanSummaryComponent } from './components/plan/planSummary/planSummary.component';
 import { FormInfoComponent } from './components/form/formInfo/formInfo.component';
 import { EditComponent } from './components/edit/edit.component';
+import { DataInfoComponent } from './components/dataInfo/dataInfo.component';
+import { BaseLogComponent } from './components/baseLog/baseLog.component';
 
 const routes: Routes = [
   {
@@ -103,6 +105,16 @@ const routes: Routes = [
     // 富文本编辑器界面
     path: 'edit',
     component: EditComponent,
+  },
+  {
+    // 数据信息界面
+    path: 'dataInfo',
+    component: DataInfoComponent,
+  },
+  {
+    // 数据日志界面
+    path: 'baseLog',
+    component: BaseLogComponent,
   },
   {
     // 404界面

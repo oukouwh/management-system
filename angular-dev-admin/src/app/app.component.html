@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-20 14:45:29
+ * @LastEditTime: 2020-07-20 16:53:04
 -->
 
 <nz-layout class="app-layout">
@@ -116,15 +116,17 @@
 
       <!-- 数据 -->
       <li nz-menu-item>
+        <a routerLink="/dataInfo">
         <i nz-icon nzType="bar-chart"></i>
         <span>数据信息</span>
+        </a>
       </li>
 
       <!-- 数据库 -->
       <li nz-submenu nzTitle="数据库" nzIcon="database">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/welcome">数据库日志</a>
+            <a routerLink="/baseLog">数据库日志</a>
           </li>
         </ul>
       </li>
@@ -259,6 +261,8 @@
         <a routerLink="'/planSummary'" routerLinkActive="active"></a>
         <a routerLink="'/formInfo'" routerLinkActive="active"></a>
         <a routerLink="'/edit'" routerLinkActive="active"></a>
+        <a routerLink="'/dataInfo'" routerLinkActive="active"></a>
+        <a routerLink="'/baseLog'" routerLinkActive="active"></a>
         <a routerLink="'/errorPage'" routerLinkActive="active"></a>
         <a routerLink="'/success'" routerLinkActive="active"></a>
         <router-outlet></router-outlet>

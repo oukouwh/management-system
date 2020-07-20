@@ -4,11 +4,10 @@
  * @Autor: hao wang
  * @Date: 2020-07-19 16:39:01
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-19 17:25:23
+ * @LastEditTime: 2020-07-20 16:53:59
  */
 
 import { Component, OnInit } from '@angular/core';
-import { EChartOption } from 'echarts';
 
 @Component({
   selector: 'app-planSummary',
