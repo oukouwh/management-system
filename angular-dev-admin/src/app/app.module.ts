@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-19 16:52:50
+ * @LastEditTime: 2020-07-20 15:12:24
  */ 
 // Angular组件放置区域↓↓↓↓↓↓↓↓↓↓↓START↓↓↓↓↓↓↓↓↓↓↓↓↓↓添加angula组件区域
 import { NgModule } from '@angular/core';
@@ -47,6 +47,8 @@ import { AppRoutingModule } from './app-routing.module';
     import { PlanSummaryComponent } from './components/plan/planSummary/planSummary.component';
     // 表单详情界面
     import { FormInfoComponent } from './components/form/formInfo/formInfo.component';
+    // 富文本编辑器的组件
+    import { EditComponent } from './components/edit/edit.component';
 // 程序加载进入组件放置区域↑↑↑↑↑↑↑↑↑END↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
 // 引入NG-ZERRO-ANTD组件↓↓↓↓↓↓↓↓↓↓↓START↓↓↓↓↓↓↓↓↓↓↓↓↓↓添加nz组件区域
@@ -65,6 +67,9 @@ import { NzUploadModule } from 'ng-zorro-antd/upload';
 // 数据可视化第三方Echarts
 import { NgxEchartsModule } from 'ngx-echarts';
 import * as echarts from 'echarts';
+
+// 富文本编辑器ngx-quill
+import { QuillModule } from 'ngx-quill';
 
 
 registerLocaleData(zh);
@@ -85,6 +90,7 @@ registerLocaleData(zh);
     PlanTimeComponent,
     PlanSummaryComponent,
     FormInfoComponent,
+    EditComponent,
     ErrorPageComponent,
     SuccessComponent,
 
@@ -109,6 +115,8 @@ registerLocaleData(zh);
     NgxEchartsModule.forRoot({
       echarts,
     }),
+    // 富文本编辑器.forRoot()
+    QuillModule.forRoot() 
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]
