@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-20 16:51:52
+ * @LastEditTime: 2020-07-21 14:34:46
  */ 
 // Angular组件放置区域↓↓↓↓↓↓↓↓↓↓↓START↓↓↓↓↓↓↓↓↓↓↓↓↓↓添加angula组件区域
 import { NgModule } from '@angular/core';
@@ -53,7 +53,10 @@ import { AppRoutingModule } from './app-routing.module';
     import { DataInfoComponent } from './components/dataInfo/dataInfo.component';
     // 数据库日志
     import { BaseLogComponent } from './components/baseLog/baseLog.component';
-
+    // 消息界面
+    import { MsgInfoComponent } from './components/msgInfo/msgInfo.component';
+    // PDF
+    import { PdfPrintComponent } from './components/pdfPrint/pdfPrint.component';
 // 程序加载进入组件放置区域↑↑↑↑↑↑↑↑↑END↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
 // 引入NG-ZERRO-ANTD组件↓↓↓↓↓↓↓↓↓↓↓START↓↓↓↓↓↓↓↓↓↓↓↓↓↓添加nz组件区域
@@ -98,6 +101,8 @@ registerLocaleData(zh);
     EditComponent,
     DataInfoComponent,
     BaseLogComponent,
+    MsgInfoComponent,
+    PdfPrintComponent,
     ErrorPageComponent,
     SuccessComponent,
 

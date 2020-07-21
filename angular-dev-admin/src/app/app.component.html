@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-20 16:53:04
+ * @LastEditTime: 2020-07-21 13:03:17
 -->
 
 <nz-layout class="app-layout">
@@ -117,8 +117,8 @@
       <!-- 数据 -->
       <li nz-menu-item>
         <a routerLink="/dataInfo">
-        <i nz-icon nzType="bar-chart"></i>
-        <span>数据信息</span>
+          <i nz-icon nzType="bar-chart"></i>
+          <span>数据信息</span>
         </a>
       </li>
 
@@ -135,15 +135,17 @@
       <li nz-submenu nzTitle="消息" nzIcon="message">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/welcome">消息列表</a>
+            <a routerLink="/msgInfo">消息列表</a>
           </li>
         </ul>
       </li>
 
       <!-- PDF -->
       <li nz-menu-item>
-        <i nz-icon nzType="file-pdf"></i>
-        <span>PDF</span>
+        <a routerLink="/pdfPrint">
+          <i nz-icon nzType="file-pdf"></i>
+          <span>PDF</span>
+        </a>
       </li>
 
       <!-- EXCEL -->
@@ -245,8 +247,10 @@
     </div>
 
     <!-- 内容区 -->
+    <!--  -->
     <nz-content>
       <div class="inner-content">
+
         <a routerLink="'/index'" routerLinkActive="active"></a>
         <a routerLink="'/login'" routerLinkActive="active"></a>
         <a routerLink="'/user'" routerLinkActive="active"></a>
@@ -263,11 +267,20 @@
         <a routerLink="'/edit'" routerLinkActive="active"></a>
         <a routerLink="'/dataInfo'" routerLinkActive="active"></a>
         <a routerLink="'/baseLog'" routerLinkActive="active"></a>
+        <a routerLink="'/msgInfo'" routerLinkActive="active"></a>
+        <a routerLink="'/pdfPrint'" routerLinkActive="active"></a>
         <a routerLink="'/errorPage'" routerLinkActive="active"></a>
         <a routerLink="'/success'" routerLinkActive="active"></a>
         <router-outlet></router-outlet>
+
       </div>
     </nz-content>
-    <nz-footer>©2020 HAO WANG 此界面解释权归オウ－コウ所有</nz-footer>
+    <!-- <div>
+      <button>hahah</button>
+    </div> -->
+    <div class="nz-footer">
+      <nz-footer>WANG HAO ©2020 Design By System</nz-footer>
+    </div>
+
   </nz-layout>
 </nz-layout>

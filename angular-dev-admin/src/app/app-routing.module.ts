@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-20 14:46:28
+ * @LastEditTime: 2020-07-21 14:33:58
  */
 
 import { NgModule } from '@angular/core';
@@ -28,6 +28,8 @@ import { FormInfoComponent } from './components/form/formInfo/formInfo.component
 import { EditComponent } from './components/edit/edit.component';
 import { DataInfoComponent } from './components/dataInfo/dataInfo.component';
 import { BaseLogComponent } from './components/baseLog/baseLog.component';
+import { MsgInfoComponent } from './components/msgInfo/msgInfo.component';
+import { PdfPrintComponent } from './components/pdfPrint/pdfPrint.component';
 
 const routes: Routes = [
   {
@@ -115,6 +117,16 @@ const routes: Routes = [
     // 数据日志界面
     path: 'baseLog',
     component: BaseLogComponent,
+  },
+  {
+    // 消息界面
+    path: 'msgInfo',
+    component: MsgInfoComponent,
+  },
+  {
+    // PDF界面
+    path: 'pdfPrint',
+    component: PdfPrintComponent,
   },
   {
     // 404界面

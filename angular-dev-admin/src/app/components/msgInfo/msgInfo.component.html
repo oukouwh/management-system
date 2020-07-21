@@ -1,0 +1,46 @@
+<!--
+ * @Description: 
+ * @Version: 0.0.1
+ * @Autor: hao wang
+ * @Date: 2020-07-20 19:55:43
+ * @LastEditors: hao wang
+ * @LastEditTime: 2020-07-21 13:52:26
+-->
+<div>
+  <nz-badge [nzCount]="count">
+    <a class="head-example"></a>
+  </nz-badge>
+  <nz-button-group>
+    <button nz-button (click)="minCount()">DEL</button>
+
+    <button nz-button (click)="addCount()">ADD</button>
+  </nz-button-group>
+</div>
+
+<div style="margin-top: 10px;">
+  <nz-badge [nzDot]="dot">
+    <a class="head-example"></a>
+  </nz-badge>
+  <nz-switch [(ngModel)]="dot"></nz-switch>
+</div>
+
+<div>
+  <h4 style="margin-bottom: 16px">Presets:</h4>
+  <div *ngFor="let color of colors">
+    <nz-badge [nzColor]="color" [nzText]="color"></nz-badge>
+  </div>
+  <h4 style="margin:16px 0">Custom:</h4>
+  <nz-badge nzColor="#f50" nzText="#f50"></nz-badge>
+  <br />
+  <nz-badge nzColor="#2db7f5" nzText="#2db7f5"></nz-badge>
+  <br />
+  <nz-badge nzColor="#87d068" nzText="#87d068"></nz-badge>
+  <br />
+  <nz-badge nzColor="#108ee9" nzText="#108ee9"></nz-badge>
+</div>
+
+<div style="margin-top: 20px;padding: 20px;">
+  <button nz-button nzType="primary" nzSize="large" (click)="createMessage('success')" >Success</button>
+  <button nz-button nzType="primary" nzSize="large" (click)="createMessage('error')" nzDanger>Error</button>
+  <button style="background-color: yellow;color:#fff;" nz-button  nzSize="large" (click)="createMessage('warning')">Warning</button>
+</div>
