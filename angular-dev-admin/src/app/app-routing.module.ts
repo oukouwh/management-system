@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-21 14:33:58
+ * @LastEditTime: 2020-07-22 11:31:18
  */
 
 import { NgModule } from '@angular/core';
@@ -30,6 +30,7 @@ import { DataInfoComponent } from './components/dataInfo/dataInfo.component';
 import { BaseLogComponent } from './components/baseLog/baseLog.component';
 import { MsgInfoComponent } from './components/msgInfo/msgInfo.component';
 import { PdfPrintComponent } from './components/pdfPrint/pdfPrint.component';
+import { ExcelComponent } from './components/excel/excel.component';
 
 const routes: Routes = [
   {
@@ -127,6 +128,11 @@ const routes: Routes = [
     // PDF界面
     path: 'pdfPrint',
     component: PdfPrintComponent,
+  },
+  {
+    // excel界面
+    path: 'excel',
+    component: ExcelComponent,
   },
   {
     // 404界面

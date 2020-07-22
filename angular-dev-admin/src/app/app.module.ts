@@ -4,7 +4,7 @@
  * @Autor: hao wang
  * @Date: 2020-07-07 20:15:20
  * @LastEditors: hao wang
- * @LastEditTime: 2020-07-21 14:34:46
+ * @LastEditTime: 2020-07-22 11:31:42
  */ 
 // Angular组件放置区域↓↓↓↓↓↓↓↓↓↓↓START↓↓↓↓↓↓↓↓↓↓↓↓↓↓添加angula组件区域
 import { NgModule } from '@angular/core';
@@ -57,11 +57,14 @@ import { AppRoutingModule } from './app-routing.module';
     import { MsgInfoComponent } from './components/msgInfo/msgInfo.component';
     // PDF
     import { PdfPrintComponent } from './components/pdfPrint/pdfPrint.component';
+    // excel
+    import { ExcelComponent } from './components/excel/excel.component';
+
 // 程序加载进入组件放置区域↑↑↑↑↑↑↑↑↑END↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
 // 引入NG-ZERRO-ANTD组件↓↓↓↓↓↓↓↓↓↓↓START↓↓↓↓↓↓↓↓↓↓↓↓↓↓添加nz组件区域
 import { zh_CN } from 'ng-zorro-antd/i18n';
-import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { NZ_I18N, en_US  } from 'ng-zorro-antd/i18n';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
@@ -103,6 +106,7 @@ registerLocaleData(zh);
     BaseLogComponent,
     MsgInfoComponent,
     PdfPrintComponent,
+    ExcelComponent,
     ErrorPageComponent,
     SuccessComponent,
 
